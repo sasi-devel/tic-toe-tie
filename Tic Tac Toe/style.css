@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1f0101;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    border: 3px solid yellow;
+    box-shadow: 0 0 0 3px yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);  
+}
+.play{
+    padding: 20px;
+}
+button{
+    width: 80px;
+    height: 20px;
+    background-color: rgb(255, 73, 7);
+    border: none;
+}
+button:hover{
+    background-color: rgb(185, 55, 8);
+}
+.win{
+    animation: winAnimation ease-in-out 1s infinite;
+}
+@keyframes winAnimation {
+    0%{background-color: red;}
+    50%{background-color: green;}
+    100%{background-color: rgb(175, 175, 3);}
+}
